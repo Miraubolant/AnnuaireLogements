@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: annuaire-logements
+    ports:
+      - "8003:80"
+    volumes:
+      - .:/var/www/html:rw
+    restart: unless-stopped
